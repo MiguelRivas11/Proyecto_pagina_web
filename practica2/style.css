@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+
+}
+body {
+    position: relative; /* Asegura que el pseudo-elemento se posicione correctamente */
+    height: 100vh;
+    width: 100%;
+    margin: 0; /* Remueve el margen por defecto del body */
+    overflow: hidden; /* Evita desbordamiento de contenido */
+}
+
+body::before {
+    content: ""; /* Necesario para que el pseudo-elemento se genere */
+    position: absolute; /* Posiciona absolutamente respecto al body */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(smile-design1.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5; /* Ajusta la opacidad según necesites */
+    z-index: -1; /* Sitúa el fondo detrás del contenido */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17px);
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+    transition: width 0.3s ease;
+}
+.sidebar:hover{
+    width: 260px;
+}
+.sidebar .logo{
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding: 25px 10px 15px;
+}
+.logo img{
+    width: 43px;
+    border-radius: 50%;
+}
+.logo h2{
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-left: 15px;
+    display: none;
+}
+.sidebar:hover .logo h2{
+    display: block;
+}
+.sidebar .links{
+    list-style: none;
+    margin-top: 20px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    height: calc(100% - 140px);
+}
+.sidebar .links::-webkit-scrollbar{
+    display: none;
+}
+.links li{
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+}
+.links hr{
+    margin: 10px 8px;
+    border: 1px solid #4c4c4c;
+}
+.sidebar:hover .links hr{
+    border-color: transparent;
+}
+.links li span{
+    padding: 12px 10px;
+}
+.links li a {
+    padding: 100x;
+    color: #000;
+    display: none;
+    font-weight: 400;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.sidebar:hover .links li a{
+    display: block;
+}
+.links .logout-link{
+    margin-top: 20px;
+}
+.material-symbols-outlined {
+    font-size: 15px;  /* Cambia el tamaño del ícono */
+           /* Cambia el color del ícono */
+  }
+  
+
